@@ -1,0 +1,98 @@
+#template1,#template2,#template3{
+    display: none;
+}
+/* #template4{
+    display: none;
+} */
+#template3{
+    border: 1px solid black;
+}
+#template1{
+    border: 1px solid black;
+}
+#template2{
+    border: 1px solid black;
+}
+#template4{
+    border: 1px solid black;
+}
+.myimg{
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+}
+.bg1{
+    background-color:aqua;
+}
+.bg2{
+    background-color:rgb(75, 66, 55);
+}
+.bg1{
+    background-color:aqua;
+}
+.bgb{
+    background-color: rgb(247, 241, 241);
+}
+.bgg{
+    background-color: rgb(233, 233, 233);
+}
+.whitebg{
+    color: white;
+}
+#so_aT{
+    float: left;
+    text-decoration: none;
+    font-weight: 700;
+}
+#sklT{
+    float: left;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.v1 {
+    border: 1px solid rgb(78, 63, 63); 
+    box-shadow: 1px 1px 3px rgb(37, 22, 22);
+    height: 800px;
+    position: absolute;
+    
+    margin-left: -3px;
+    top: 0;
+    
+    
+  }
+
+
+.page {
+    background-color: whitesmoke;
+    width: 70%;
+    height: max-content;
+    margin: 0% 13%;
+    box-shadow: 0px 0px 29px gray;
+    border-radius: 27px;
+}
+
+hr {
+    border: 2px solid black;
+}
+
+.image {
+    display: flex;
+}
+
+.container .row .col-md-6 .form-group>input[type=file] {
+    display: none;
+}
+
+.container img {
+    height: 200px;
+    width: 200px;
+}
+
+.name {
+    width: 60%;
+
+}
+
