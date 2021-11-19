@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Resume builder</title>
+</head>
+<style>
+    /* background-color: #313B47; */
+</style>
+
+<body>
+    <div class="gry" style="background-color: #313B47;">
+        <div class="page" id="resume-form">
+            <div class="container">
+                <h1 class="text-center my-2">Resume Builder</h1>
+
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mx-5">
+                            <label for="file-input" id="profile_image">
+                                <img src="Untitled-1.png" />
+
+                            </label>
+                            <input type="file" id="file-input" />
+                            <h4 class="mx-4">Upload image</h4>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="form-group mt-4 mx-5">
+                            <label for="Name">
+                                <h4>Name</h4>
+                            </label>
+                            <input type="text" placeholder="Enter your name" id="Name" class="form-control" />
+                        </div>
+                        <div class="form-group mt-2 mx-5">
+                            <label for="Quick">
+                                <h4>Quick</h4>
+                            </label>
+                            <input type="text" placeholder="Short pitch about your self" id="quick"
+                                class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!-- 2nd part -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mt-2 mx-5 ">
+                            <label for="Email">
+                                <h4>Email</h4>
+                            </label>
+                            <input type="email" name="email" id="email" placeholder="ex: example@abc.com"
+                                class="form-control" />
+                        </div>
+                        <div class="form-group mt-2 mx-5 ">
+                            <label for="Address">
+                                <h4>Address</h4>
+                            </label>
+                            <textarea name="address" id="address" cols="30" rows="10"
+                                class="form-control">Enter Here</textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="form-group mt-2 mx-5 ">
+                            <label for="Contact">
+                                <h4>Contact</h4>
+                            </label>
+                            <input type="number" placeholder="Enter your name" id="contact" maxlength="10"
+                                class="form-control" />
+                        </div>
+
+                        <div class="form-group mt-2 mx-5 ">
+                            <label for="City">
+                                <h4>city</h4>
+                            </label>
+                            <input type="text" placeholder="Enter your city" id="city" class="form-control" />
+                        </div>
+                        <div class="form-group mt-2 mx-5 ">
+                            <label for="State">
+                                <h4>State</h4>
+                            </label>
+                            <input type="text" placeholder="Enter State" id="state" class="form-control" />
+                        </div>
+                        <div class="form-group mt-2 mx-5 ">
+                            <label for="Country">
+                                <h4>Country</h4>
+                            </label>
+                            <input type="text" placeholder="Enter your country" id="country" class="form-control" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row 
+       ">
+                <div class="col-md-6 ">
+
+                    <div class="form-group mt-2 mx-5" id="edu">
+                        <label for="Education">
+                            <h4>Education</h4>
+                        </label>
+                        <input type="text" placeholder="Study Program" id="Education" class="form-control ed" />
+                        <div class="container " id="educations">
+                            <button onclick="education()" class="btn btn-primary btn-sm my-1 ">+</button>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mt-2 mx-5" id="prp">
+                        <label for="Personal Projects">
+                            <h4>Personal Projects</h4>
+                        </label>
+                        <input type="text" placeholder="Project Name" id="Project" class="form-control pr" />
+                        <div class="container " id="personal_project">
+                            <button class="btn btn-primary btn-sm my-1 " onclick="personal_project()">+</button>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mt-2 mx-5" id="wrk_exp">
+                        <label for="Work">
+                            <h4>
+                                Work Experience
+                            </h4>
+                        </label>
+                        <input type="text" placeholder="Workplace/Company" id="work_experience"
+                            class="form-control we" />
+                        <div class="container " id="Work_experience">
+                            <button class="btn btn-primary btn-sm my-1 " onclick="work_experience()">+</button>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <p class="text-secondary mt-3 mx-5">Important Links</p>
+
+                    <div class="form-group mt-2 mx-5" id="s_a">
+                        <label for="Social_accnts">
+                            <h4>Social Account</h4>
+                        </label>
+                        <input type="text" placeholder="LinkedIn " id="social_accountL" class="form-control " />
+                        <input type="text" placeholder="Github Link" id="social_accountG" class="form-control so_aG" />
+                        <!-- <div class="container " id="social_acc">
+                        <button class="btn btn-primary btn-sm my-1 " onclick="social_acc()">+</button>
+                    </div> -->
+                    </div>
+
+
+
+                </div>
+                <div class="col-md-6 ">
+                    <div class="form-group mt-2 mx-5" id="sk">
+                        <label for="skills">
+                            <h4>
+                                Skills
+                            </h4>
+                        </label><br>
+                        <input type="text" placeholder="Add Your skills" id="skill" class="form-control skl" />
+                        <div class="container " id="skills">
+                            <button class="btn btn-primary btn-sm my-1 " onclick="skills()">+</button>
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-group mt-2 mx-5" id="ac">
+                    <label for="Achivement">
+                        <h4>Achivements</h4>
+                    </label>
+                    <input type="text" placeholder="Achivement Name" class="Achivement" class="form-control ach" />
+                    <div class="container " id="Achivements">
+                        <button class="btn btn-primary btn-sm my-1 " onclick="achivements()">+</button>
+                    </div>
+                </div> -->
+
+                    <div class="form-group mt-2 mx-5"> <label for="Organization">
+                            <h4>Organization</h4>
+                        </label>
+                        <input type="text" placeholder="Organization Name" id="Organization" class="form-control" />
+                    </div>
+
+                    <div class="form-group mt-2 mx-5" id="cer"><label for="certificate">
+                            <h4>Certificates</h4>
+                        </label>
+                        <input type="text" placeholder="Certificate Name" id="Certificate" class="form-control crts" />
+
+                    </div>
+                    <div class="container " id="Certificate">
+                        <button class="btn btn-primary btn-sm my-1 
+                    mx-5" onclick="certificate()">+</button>
+                    </div>
+
+
+                    <div class="form-group mt-2 mx-5"><label for="Language">
+                            <h4>Languages</h4>
+                        </label>
+                        <input type="text" placeholder="Language" id="Language" class="form-control" />
+                    </div>
+                    <div class="form-group mt-2 mb-5 mx-5"><label for="Interest">
+                            <h4>Interests</h4>
+                        </label>
+                        <input type="text" placeholder="Your Interest" id="Interest" class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="container text-center">
+                <div class="btn btn-primary btn-lg text-center my-4 mx-3" onclick="template1()">template 1</div>
+                <div class="btn btn-primary btn-lg text-center my-4 mx-3" onclick="template2()">template 2</div>
+                <div class="btn btn-primary btn-lg text-center my-4 mx-3" onclick="template3()">template 3</div>
+                <div class="btn btn-primary btn-lg text-center my-4 mx-3" onclick="template4()">template 4</div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- template 1-->
+
+    <div class="container-fluid" id="template1">
+        <div class="row">
+            <div class="col-md-4 text-center p-5 bg1">
+                <!-- 1st -->
+                <img id="prfl_pc"
+                    src="https://mpng.subpng.com/20180329/zue/kisspng-computer-icons-user-profile-person-5abd85306ff7f7.0592226715223698404586.jpg"
+                    alt="" class="img-fluid myimg">
+
+                <div class="container ">
+                    <p id="nameT1"><b>Meet M. Sukhadiya</b></p>
+                    <p><b id="quickT"> I am a Lerner.</b></p>
+                    <p><b>+91-</b><b id="contctT">9510047781</b></p>
+                    <p><b id="emailT">abc@gmail.com</b></p>
+                    <p><b id="addressT">Sukhadiya Khadki, Gndhi Chowk</b><b>,</b>
+                        <b id="cityT">kheda</b><b>, </b>
+                        <b id="stateT">Gujarat</b><b>, </b>
+                        <b id="countryT">India</b>
+                    </p>
+                    <hr>
+                    <p class="text-secondary" style="position: absolute;
+                    left: 6
+                vw
+                ;"><b>Social Links</b></p><br>
+
+                    <a id="so_aT1" href="#">Linkedin</a></li>
+                    <a id="so_aT2" href="#">Github</a></li>
+                    <br>
+                   
+
+                    <p class="text-secondary text-center" style="position: absolute;
+                    left: 6
+                vw
+                ;" ><b>Skills</b></p><br>
+                    <ul id="sklT" style="float: left;">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 ">
+                <!-- 2nd -->
+
+                <h1 id="nameT2" class="text-center" style="font-weight: 980 ;">Meet M. Sukhadiya</h1>
+                <!-- objective card -->
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="card-body ">
+                        <p id="EducationT">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laboriosam voluptatum
+                            itaque ex. Tempora enim voluptas ratione quidem totam deserunt optio officia dignissimos
+                            ipsum quod! Quos fugit laudantium distinctio aperiam cum quae maiores quo itaque, doloribus
+                            voluptatum quisquam veniam labore iure, sunt, id quidem in voluptate sed repudiandae
+                            obcaecati sint laborum enim? Quasi aspernatur consequatur aliquid minima maxime.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- work_experience -->
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul id="work_experienceT">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- academic qualificatin -->
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Personal Projects</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul id="PpT">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3> Certificates</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul id="CertiT">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Organization</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul>
+                            <li id="OrgT">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul>
+                            <li id="LanT">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Interests</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul>
+                            <li id="IntsT">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+                <div class="container mt-3 text-center">
+                    <button onclick="print_Resume()" class="btn" style="background-color: aqua;">
+                        Print Resume
+                    </button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- template 2 -->
+
+    <div class="container-fluid" id="template2">
+        <div class="row ">
+            <div class="col-md-3 bg2">
+                <div class="container text-center">
+                    <img id="prfl_pc2"
+                        src="https://mpng.subpng.com/20180329/zue/kisspng-computer-icons-user-profile-person-5abd85306ff7f7.0592226715223698404586.jpg"
+                        alt="" class="img-fluid myimg mt-3">
+                </div>
+
+                <div class="container-fluid  row" style="float:left;">
+                    <h4 class="mt-5" style="color: white;">ABOUT ME</h4 class="mt-5">
+                    <p id="quickT2" class="whitebg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+                        perferendis magni tenetur provident error quam reiciendis modi aliquid quasi, consequuntur et
+                        rem facilis, quae quos!</p>
+                </div>
+                <div class="container row" style="float:left;">
+                    <h4 class="mt-3" style="color: white; float:left;   ">LINKS</h4 class="mt-5">
+                    <p><a class="whitebg" id="so_aT12" href="#">LinkedIn</a></p>
+                    <p><a class="whitebg" id="so_aT22" href="#">Github</a></p>
+                </div>
+                <div class="container-fluid  row" style="float:left;">
+                    <h4 class="mt-5" style="color: white;">LANGUAGES</h4>
+                    <div class="card-body ">
+                        <ul>
+                            <li id="LanT2" class="whitebg">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="col-md-9 bgb">
+                <div class="row mt-5">
+                    <div class="col-md-6 ">
+                        <p class="mt-5 ">
+                        <h1 id="nameT12">Meet Sukhadiya</h1>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mx-2"><img src="emailn.png"
+                                style="height: 23px; width: 24px; margin: 0px 10px 0px 0px;"><b
+                                id="emailT2">abc@gmail.com</b></p>
+                        <hr style="margin: 10px 40px;">
+                        <p class="mx-2"><img src="call.png"
+                                style="height: 23px; width: 23px; margin-right: 10px;"><b>+91-</b><b
+                                id="contctT2">9510047781</b></p>
+                        <hr style="margin: 10px 40px;">
+                        <p class="mx-2"><img src="location.png"
+                                style="height: 20px; width: 20px; margin-right: 10px;"><b id="addressT2">Sukhadiya
+                                Khadki, Gndhi Chowk</b><b>,
+                                    <br>
+                                </b>
+                            <b id="cityT2" style="margin-left: 30px;" >kheda</b><b>, </b>
+                            <b id="stateT2">Gujarat</b><b>, </b>
+                            <b id="countryT2">India</b>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container-fluid mt-5">
+                        <h4 style="margin: 0px 28.5px ;">WORK EXPERIENCE</h4 class="mt-5">
+                        <hr style=" border: 1px solid rgb(44, 39, 32);
+                            margin:18px 28.5px ;">
+                    </div>
+                    <div class="col-md-12">
+                        <ul id="work_experienceT2" style="margin:0px 38.5px ;">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container-fluid mt-5">
+                        <h4 style="margin:0px 28.5px ;">EDUCATION</h4 class="mt-5">
+                        <hr style=" border: 1px solid rgb(44, 39, 32);
+                            margin:18px 28.5px ;    ">
+                    </div>
+                    <div class="col-md-12">
+                        <p id="EducationT2" style="margin:0px 50.5px ;">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laboriosam voluptatum
+                            itaque ex. Tempora enim voluptas ratione quidem totam deserunt optio officia dignissimos
+                            ipsum quod! Quos fugit laudantium distinctio aperiam cum quae maiores quo itaque, doloribus
+                            voluptatum quisquam veniam labore iure, sunt, id quidem in voluptate sed repudiandae
+                            obcaecati sint laborum enim? Quasi aspernatur consequatur aliquid minima maxime.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container-fluid mt-5">
+                            <h4>SKILLS</h4 class="mt-5">
+                            <hr style=" border: 1px solid rgb(44, 39, 32);">
+                        </div>
+                        <ul id="sklT2" style="margin:0px 34.5px ;">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="container-fluid mt-5">
+                            <h4>PROJECTS</h4 class="mt-5">
+                            <hr style=" border: 1px solid rgb(44, 39, 32);">
+                        </div>
+                        <ul id="PpT2" style="margin:0px 34.5px ;">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="container-fluid mt-5">
+                        <h4 style="margin:0px 28.5px ;">CERTIFICATES</h4 class="mt-5">
+                        <hr style=" border: 1px solid rgb(44, 39, 32);
+                            margin:18px 28.5px ;">
+                    </div>
+                    <div class="col-md-12">
+                        <ul id="CertiT2" style="margin:0px 38.5px ;">
+                            <li>
+                                1
+
+                            </li>
+                            <li>
+                                1
+
+                            </li>
+                            <li>
+                                1
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container-fluid mt-5">
+                            <h4>ORGANIZATION</h4 class="mt-5">
+                            <hr style=" border: 1px solid rgb(44, 39, 32);">
+                        </div>
+                        <ul>
+                            <li id="OrgT2" style="margin:0px 34.5px ;">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="container-fluid mt-5">
+                            <h4>INTERESTS</h4 class="mt-5">
+                            <hr style=" border: 1px solid rgb(44, 39, 32);">
+                        </div>
+                        <ul>
+                            <li id="IntsT2" style="margin:0px 34.5px ;">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container my-3 text-center" style="float:left;">
+                    <button onclick="print_Resume()" class="btn"
+                        style="background-color: rgb(44, 39, 32); color: white;">
+                        Print Resume
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- template3 -->
+
+
+    <div class="container-fluid" id="template3">
+        <div class="row text-center my-5">
+            <h1 id="nameT13">MEET M SUKHADIYA</h1>
+            <h5>WEB DEVELOPER</h5>
+        </div>
+        <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22);">
+
+        <div class="row" style="align-items: center;">
+            <div class="col-md-4">
+                <p class="mx-5"><img src="emailn.png"
+                    style="height: 23px; width: 24px; margin: 0px 10px 0px 0px;"><b
+                    id="emailT3">abc@gmail.com</b></p>
+                    
+            </div>
+            <div class="col-md-4">
+                <p class="mx-5"><img src="call.png"
+                    style="height: 23px; width: 23px; margin-right: 10px;"><b>+91-</b><b
+                    id="contctT3">9510047781</b></p>
+                   
+            </div>
+            <div class="col-md-4">
+                <p class="mx-5"><img src="location.png"
+                    style="height: 20px; width: 20px; margin-right: 10px;"><b id="addressT3">Sukhadiya
+                    Khadki, Gndhi Chowk</b><b>,</b><br>
+                <b id="cityT3" style="margin-left: 30px;">kheda</b><b>, </b>
+                <b id="stateT3">Gujarat</b><b>, </b>
+                <b id="countryT3">India</b>
+            </p>
+            </div>
+        </div>
+
+        <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+
+        <div class="row" style="align-items: center;">
+            <div class="col-md-4 text-center my-3">
+                <img id="prfl_pc3"
+                    src="https://mpng.subpng.com/20180329/zue/kisspng-computer-icons-user-profile-person-5abd85306ff7f7.0592226715223698404586.jpg"
+                    alt="" class="img-fluid myimg" style="height: 220px; width: 220px;">
+            </div>
+            <div class="col-md-7 my-5 mx-5">
+                <h1>OBJECTIVE</h1>
+                <p id="quickT3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus molestias fuga perferendis ipsum expedita hic, eaque quae fugit molestiae reprehenderit, tempore quaerat est quis perspiciatis voluptatem eveniet maxime. Voluptate culpa explicabo sapiente ipsum odio totam ducimus enim similique excepturi soluta?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" style="border: 1.5px solid rgb(53, 34, 34);box-shadow: 1px 1px 3px rgb(37, 22, 22);">
+                <div class="row">
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+
+                    <h2>CONTACT LINKS</h2>
+
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+                    <p><a style="color: black; text-decoration: none;" id="so_aT13" href="#">LinkedIn</a></p>
+                    <p><a style="color: black; text-decoration: none;" id="so_aT23" href="#">Github</a></p>
+                </div>
+                <div class="row">
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+
+                    <h2>EDUCATION</h2>
+
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22);margin-top: 2px;">
+                    <div class="col-md-12">
+                        <p id="EducationT3" >
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laboriosam voluptatum
+                            itaque ex. Tempora enim voluptas ratione quidem totam deserunt optio officia dignissimos
+                            ipsum quod! Quos fugit laudantium distinctio aperiam cum quae maiores quo itaque, doloribus
+                            voluptatum quisquam veniam labore iure, sunt, id quidem in voluptate sed repudiandae
+                            obcaecati sint laborum enim? Quasi aspernatur consequatur aliquid minima maxime.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22);margin-top: 15px;">
+
+                    <h2>WORK EXPERIENCE</h2>
+
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22);margin-top: 2px;">
+                    <div class="col-md-12">
+                        <ul id="work_experienceT3">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+    
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+
+                    <h2>INTERESTS</h2>
+
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+                    <ul>
+                        <li id="IntsT3" style="margin:0px 34.5px ;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                            enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+           
+
+            <div class="col-md-8" style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22);">
+                <div class="row">
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+                <h2 style="margin-left: 40px;">PROJECTS</h2>
+                <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+                <div class="col-md-12">
+                    <ul id="PpT3" style="margin:0px 44.5px ;">
+                        <li>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                            enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                            enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                            enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <div class="row">
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: 15px;">
+                <h2 style="margin-left: 40px;">CERTIFICATES</h2>
+                <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+                <div class="col-md-12">
+                    <ul id="CertiT3" style="margin:0px 38.5px ;">
+                        <li>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, inventore officiis ex aspernatur fugit exercitationem facilis qui debitis fuga optio ut? Amet fugit blanditiis recusandae illo, doloremque perferendis minima architecto?
+    
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, inventore officiis ex aspernatur fugit exercitationem facilis qui debitis fuga optio ut? Amet fugit blanditiis recusandae illo, doloremque perferendis minima architecto?
+    
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, inventore officiis ex aspernatur fugit exercitationem facilis qui debitis fuga optio ut? Amet fugit blanditiis recusandae illo, doloremque perferendis minima architecto?
+    
+                        </li>
+    
+                    </ul>
+                </div>
+                </div>
+                <div class="row">
+                    <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: 15px;">
+                <h2 style="margin-left: 40px;">RELEVENT SKILL</h2>
+                <hr style="border: 1.5px solid rgb(53, 34, 34);  margin-top: -1px;">
+                <div class="col-md-12">
+                    <ul id="sklT3" style="margin:0px 34.5px 1px 34.5px ;">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                    </ul>
+                  <br>
+                </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6" style="border:  none solid solid solid; box-shadow: 1px 1px 1px black;">
+                        <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22);  width: 100%;">
+                        <h2 style="margin-left: 40px;">ORGANIZATION</h2>
+                        <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+                        <div class="col-md-12">
+                            <ul>
+                                <li id="OrgT3" style="margin:0px 34.5px ;">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                    enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                                </li>
+    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="border:  none none solid none; box-shadow: 1px 1px 1px black;">
+                        <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); ">
+                        <h2 style="margin-left: 40px;">LANGUAGES</h2>
+                        <hr style="border: 1.5px solid rgb(53, 34, 34); box-shadow: 1px 1px 3px rgb(37, 22, 22); margin-top: -1px;">
+                        <div class="col-md-12">
+                            <ul>
+                                <li id="LanT3">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                    enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="print_Resume()" class="btn" style="background-color:  rgb(179, 168, 168);">
+                        Print Resume
+                    </button>
+                </div>
+
+            </div>
+            
+        </div>
+
+        </div>
+    </div>
+
+    <!-- template4 -->
+
+    <div class="container" id="template4">
+        <div class="row">
+            <div class="col-md-4 text-center p-5 bg1">
+                <!-- 1st -->
+                <img id="prfl_pc"
+                    src="https://mpng.subpng.com/20180329/zue/kisspng-computer-icons-user-profile-person-5abd85306ff7f7.0592226715223698404586.jpg"
+                    alt="" class="img-fluid myimg">
+
+                <div class="container ">
+                    <p id="nameT1"><b>Meet M. Sukhadiya</b></p>
+                    <p><b id="quickT"> I am a Lerner.</b></p>
+                    <p><b>+91-</b><b id="contctT">9510047781</b></p>
+                    <p><b id="emailT">abc@gmail.com</b></p>
+                    <p><b id="addressT">Sukhadiya Khadki, Gndhi Chowk</b><b>,</b>
+                        <b id="cityT">kheda</b><b>, </b>
+                        <b id="stateT">Gujarat</b><b>, </b>
+                        <b id="countryT">India</b>
+                    </p>
+                    <hr>
+                    <p class="text-secondary"><b>Social Links</b></p>
+                    <ul>
+                        <li><a id="so_aT" href="#">Contact Link</a></li>
+                    </ul>
+                    <p class="text-secondary" style="float: left;"><b>Skills</b></p>
+                    <ul id="sklT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eos?</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 ">
+                <!-- 2nd -->
+
+                <h1 id="nameT2" class="text-center" style="font-weight: 980 ;">Meet M. Sukhadiya</h1>
+                <!-- objective card -->
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="card-body ">
+                        <p id="EducationT">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laboriosam voluptatum
+                            itaque ex. Tempora enim voluptas ratione quidem totam deserunt optio officia dignissimos
+                            ipsum quod! Quos fugit laudantium distinctio aperiam cum quae maiores quo itaque, doloribus
+                            voluptatum quisquam veniam labore iure, sunt, id quidem in voluptate sed repudiandae
+                            obcaecati sint laborum enim? Quasi aspernatur consequatur aliquid minima maxime.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- work_experience -->
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul id="work_experienceT">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- academic qualificatin -->
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Personal Projects</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul id="PpT">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3> Certificates</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul id="CertiT">
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Organization</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul>
+                            <li id="OrgT">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul>
+                            <li id="LanT">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header " style="background-color: aqua;">
+                        <h3>Interests</h3>
+                    </div>
+                    <div class="card-body ">
+                        <ul>
+                            <li id="IntsT">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, explicabo officiis amet
+                                enim qui atque praesentium optio temporibus id, vero mollitia recusandae incidunt!
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+                <div class="container mt-3 text-center">
+                    <button onclick="print_Resume()" class="btn" style="background-color: aqua;">
+                        Print Resume
+                    </button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
